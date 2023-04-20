@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gadalaiki</title>
+  </head>
+  <body>
+    <h1>Gadalaiki</h1>
+    <button onclick="handleDelete()">dzēst pēdējo</button>
+    <ul id="saraksts"></ul>
+    <script>
+      const gadalaiki = ["pavasaris", "vasara", "rudens", "ziema"];
+
+      function displayItemsToHTML() {
+        gadalaiki.forEach((viensGadalaiks) => {
+          console.log(viensGadalaiks);
+          const listItem = document.createElement("li");
+          listItem.textContent = viensGadalaiks;
+          const list = document.getElementById("saraksts");
+          list.appendChild(listItem);
+        });
+      }
+
+      displayItemsToHTML();
+
+      gadalaiki.forEach((viensGadalaiks) => {
+        console.log(viensGadalaiks);
+        const listItem = document.createElement("li");
+        listItem.textContent = viensGadalaiks;
+        const list = document.getElementById("saraksts");
+        list.appendChild(listItem);
+      });
+      function handleDelete() {
+        gadalaiki.pop();
+        console.log(gadalaiki);
+        const list = document.getElementById("saraksts");
+        list.innerHTML = "";
+        gadalaiki.forEach((viensGadalaiks) => {
+          console.log(viensGadalaiks);
+          const listItem = document.createElement("li");
+          listItem.textContent = viensGadalaiks;
+          const list = document.getElementById("saraksts");
+          list.appendChild(listItem);
+        });
+      }
+    </script>
+  </body>
+</html>

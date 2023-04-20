@@ -16,7 +16,24 @@ header {
   height: 100vh;
   background: center/cover no-repeat;
 }
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
 
+.darbs1 {
+  width: 300px;
+  height: 100px;
+  border: solid green;
+  border-radius: auto;
+}
+
+.darbs {
+  width: 300px;
+  height: 100px;
+  border: solid green;
+  border-radius: auto;
+}
 nav {
   display: flex;
   align-items: center;
