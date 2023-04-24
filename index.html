@@ -13,9 +13,19 @@
                  <div class="navigation_box">
                     <img class="image" src="https://logopond.com/logos/aa665d18cb535824d72e3477aa9cc76f.png" alt="">
                     <div class="navigation_box2">
-                        <a class="navigation_link" href="#darbi">Projekti   </a>
-                        <a class="navigation_link" href="#Kontakti">Kontakti </a>
+                        <a class="navigation_link navigation_link1" href="#darbi">Projekti   </a>
+                        <a class="navigation_link navigation_link1" href="#Kontakti">Kontakti </a>
                     </div>
+                    <div class="toggle_btn" id="toggle_btn">
+                        <div>
+                            <span class="line-1"></span>
+                            <span class="line-2"></span>
+                            <span class="line-3"></span>
+                        </div>
+                    </div>
+                <div class="dropdown_menu">
+                    <a class="navigation_link" href="#darbi">Projekti </a>
+                    <a class="navigation_link" href="#Kontakti">Kontakti </a>
                 </div>
             </div>
             <div id="#sakums" class="container2">  
@@ -41,16 +51,20 @@
                 </h1>
                  
                 <h2 class="text2">
-                Projekti atradīsies te, sekojat līdzi viņiem!
+                Projekti atradīsies te, sekojat līdzi viņiem!</h2>
+                <div class="abi_dabri">
                 <a href="gadalaiki.html" target="blank">
                 <article class="darbs" >
                     <p>1.projekts (gadalaiki)</p>
                 </article>
+                </a>
                 <a href="funkcijas.html" target="blank">
-                <article class="darbs1">
+                <article class="darbs">
                     <p>2.projekts(funkcijas)</p>
                 </article>
-                </h2>
+                </a>
+                </div>
+                
             </div>
         </div>
         <div id="Kontakti" class="container2">  
@@ -73,4 +87,13 @@
             </div>
         </div>
 </body>
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+    toggleBtn.onclick =function(){
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+            toggleBtn.classList.toggle("openmenu");
+    }
+</script>
 </html>
