@@ -1,0 +1,17 @@
+html {
+    --krasa: rgb(33, 79, 204);
+    --galvenes-augstums: 60px;
+}
+
+header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: var(--galvenes-augstums);
+ width: 100vw;
+ background-color: orange;
+}
+
+main {
+    padding-top: var(--galvenes-augstums);
+}
